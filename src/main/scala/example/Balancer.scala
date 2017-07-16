@@ -1,7 +1,5 @@
 package example
 
-import java.io.PrintWriter
-
 import scala.annotation.tailrec
 
 /**
