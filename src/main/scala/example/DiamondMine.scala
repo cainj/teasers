@@ -111,12 +111,13 @@ object DiamondMine {
       case p if(square(p, terrain) != Wall)=> (p, square(p, terrain))
     }
   }
+
+  object State {
+
+    val Wall = -1
+    val Diamond = 1
+    val Empty = 0
+  }
 }
 
 
-object State {
-
-  val Wall = -1
-  val Diamond = 1
-  val Empty = 0
-}
