@@ -8,7 +8,7 @@ import scala.util.{Failure, Success, Try}
   * Find all possible words that can be formed by a sequence of adjacent characters.
   * Note that we can move to any of 8 adjacent characters, but a word should not have multiple instances of same cell.
   */
-object Boogle {
+object Boggle {
 
   type Boggle = Array[Array[Char]]
 
