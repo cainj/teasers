@@ -3,21 +3,20 @@ package example.structures
 import scala.collection.mutable
 
 /**
-  *
-  */
+ *
+ */
 trait LruCache[K, V] {
   def +(key: K, value: V)
   def get(key: K): Option[V]
 }
 
-
-class LruCache1[K: Manifest, V](val capacity: Int) extends LruCache[K, V]{
+class LruCache1[K: Manifest, V](val capacity: Int) extends LruCache[K, V] {
 
   private val bucket = new HashMap[K, V]
   private val pages = new MutableDLL[K]
 
-  override def +(key: K, value: V){
-    if(pages.size > capacity) {
+  override def +(key: K, value: V) {
+    if (pages.size > capacity) {
       val lru = pages.last
       bucket - lru
     }
@@ -35,12 +34,12 @@ class LruCache1[K: Manifest, V](val capacity: Int) extends LruCache[K, V]{
 }
 
 /**
-  * Step thru tutorial by Mark Lewis
-  *
-  * https://www.youtube.com/watch?v=ZPz0S9XGG6o
-  * @tparam A
-  */
-class MutableDLL[A: Manifest] extends mutable.Buffer[A]{
+ * Step thru tutorial by Mark Lewis
+ *
+ * https://www.youtube.com/watch?v=ZPz0S9XGG6o
+ * @tparam A
+ */
+class MutableDLL[A: Manifest] extends mutable.Buffer[A] {
 
   private class Node(var data: A, var prev: Node, var next: Node)
   private val end = new Node(new Array[A](1)(0), null, null)
@@ -50,16 +49,16 @@ class MutableDLL[A: Manifest] extends mutable.Buffer[A]{
   private var numElems = 0
 
   override def apply(n: Int): A = {
-    if(n < 0 || n >= numElems) throw new IndexOutOfBoundsException("Requested " + n + " of dll does not exists.")
+    if (n < 0 || n >= numElems) throw new IndexOutOfBoundsException("Requested " + n + " of dll does not exists.")
     var rover = end.next
-    for( i <- 0 until n) rover = rover.next
+    for (i <- 0 until n) rover = rover.next
     rover.data
   }
 
   override def update(n: Int, newelem: A): Unit = {
-    if(n < 0 || n >= numElems) throw new IndexOutOfBoundsException("Updating " + n + " of dll does not exists.")
+    if (n < 0 || n >= numElems) throw new IndexOutOfBoundsException("Updating " + n + " of dll does not exists.")
     var rover = end.next
-    for( i <- 0 until n) rover = rover.next
+    for (i <- 0 until n) rover = rover.next
     rover.data = newelem
 
   }
@@ -73,10 +72,10 @@ class MutableDLL[A: Manifest] extends mutable.Buffer[A]{
   override def length: Int = numElems
 
   override def remove(n: Int): A = {
-    if(n < 0 || n >= numElems) throw new IndexOutOfBoundsException("Updating " + n + " of dll does not exists.")
+    if (n < 0 || n >= numElems) throw new IndexOutOfBoundsException("Updating " + n + " of dll does not exists.")
     numElems -= 1
     var rover = end.next
-    for( i <- 0 until n) rover = rover.next
+    for (i <- 0 until n) rover = rover.next
     val ret = rover.data
     rover.next.prev = rover.prev
     ret
@@ -100,8 +99,8 @@ class MutableDLL[A: Manifest] extends mutable.Buffer[A]{
 
   override def insertAll(n: Int, elems: Traversable[A]): Unit = {
     var rover = end.next
-    for( i <- 0 until n) rover = rover.next
-    for(e <- elems) {
+    for (i <- 0 until n) rover = rover.next
+    for (e <- elems) {
       val n = new Node(e, rover.prev, rover)
       numElems += 1
       rover.prev.next = n
