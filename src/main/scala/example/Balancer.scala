@@ -10,7 +10,7 @@ import scala.annotation.tailrec
     Complete the balancedOrNot function in the editor below. It has the following parameters:
 
     An array of n strings, expressions, denoting the list of expressions to check.
-    An array of n integers, maxReplacements, where maxReplacementsi denotes the maximum number of replacements allowed when attempting to balance expressionsi.
+    An array of n integers, maxReplacements, where maxReplacements i denotes the maximum number of replacements allowed when attempting to balance expressionsi.
 
     The function must return an array of integers where each index i (0 ≤ i < n) contains a 1 if expressionsi is balanced or a 0 if it is not.
 
@@ -22,8 +22,8 @@ import scala.annotation.tailrec
 
     Constraints
     1 ≤ n ≤ 102
-    1 ≤ length of expressionsi ≤ 105
-    0 ≤ maxReplacementsi ≤ 105
+    1 ≤ length of expressionsi ≤ 10^5
+    0 ≤ maxReplacementsi ≤ 10^5
 
     Output Format
     The function must return an array of integers where each index i (0 ≤ i < n) contains a 1 if expressions i is balanced or a 0 if it is not.
