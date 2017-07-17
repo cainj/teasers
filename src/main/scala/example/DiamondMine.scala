@@ -57,9 +57,9 @@ object DiamondMine {
 
   type Path = List[(Position, Int)]
 
-  val start = (Position(0,0), 0)
-
   type Terrain = Array[Array[Int]]
+
+  val start = (Position(0,0), 0)
 
   val initialPath = List(start)
 

@@ -28,11 +28,14 @@ object Boogle {
     * @return
     */
   def solve(words: Words, boggle: Boggle) ={
-    (for{
+    val pathsFromStart =
+      (for{
       i <- words.indices
-      start <- findStartingPositions(words(i).head, boggle)
-      streams <- createStreams(words(i).tail, boggle, List(start), Set.empty)
-    } yield streams) map { _ map { _._2 } mkString} toSet
+      starts <- findStartingPositions(words(i).head, boggle) map { m => (m, words(i))}
+      found <- createStreams(starts._2.tail, boggle, List(starts._1), Set.empty)
+    } yield found.mkString)
+
+    pathsFromStart
   }
 
   /**
@@ -44,17 +47,17 @@ object Boogle {
     * @param explored The squares already visited.
     * @return
     */
-  def createStreams(word: String, boggle: Boggle, path: Path, explored: Set[Square]): Set[Path] = {
+  def createStreams(word: String, boggle: Boggle, path: Path, explored: Set[Square]): Stream[List[Char]] = {
     if(word != "")
       path match {
-        case Nil => Set(path)
+        case Nil => Stream(path map {_._2})
         case head :: tail =>
           (for {
             (pos, letter) <- head._1.validLetters(word.head, boggle) diff explored
             if(letter == word.head)
-          } yield createStreams(word.tail, boggle, (pos, letter) :: path, explored + (pos -> letter))).flatten
+          } yield createStreams(word.tail, boggle, (pos, letter) :: path, explored + (pos -> letter))).flatten.toStream
       }
-    else Set(path.reverse)
+    else Stream(path.reverse map {_._2})
   }
 
   /**
