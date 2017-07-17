@@ -74,11 +74,11 @@ object Boggle {
 
   def main(args: Array[String]): Unit = {
 
-    //Should return GEEKS and QUIZ
-    println(solve(Array("GEEKS", "FOR", "QUIZ", "GO"), Array(Array('G', 'I', 'Z'), Array('U', 'E', 'K'), Array('Q', 'S', 'E'))))
+    //Should pass
+    assert(solve(Array("GEEKS", "FOR", "QUIZ", "GO"), Array(Array('G', 'I', 'Z'), Array('U', 'E', 'K'), Array('Q', 'S', 'E'))) == Vector("GEEKS", "QUIZ"))
 
-    //Should find SLIP, SOUL, and SOUP
-    println(solve(Array("POOL", "POOR", "SOUL", "SOUP", "SLIP"), Array(Array('P', 'I', 'O'), Array('O', 'U', 'L'), Array('R', 'S', 'O'))))
+    //Should pass
+    assert(solve(Array("POOL", "POOR", "SOUL", "SOUP", "SLIP"), Array(Array('P', 'I', 'O'), Array('O', 'U', 'L'), Array('R', 'S', 'O'))) == Vector("SOUL", "SOUP", "SLIP"))
   }
 
   case class Pos(x: Int, y: Int) {
