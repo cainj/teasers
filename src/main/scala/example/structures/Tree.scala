@@ -1,9 +1,11 @@
 package example.structures
 
+import scala.collection.mutable.ListBuffer
+
 /**
  * Trait for a Binary Search Tree
  */
-sealed abstract class Tree[A](var key: A, var left: Tree[A], var right: Tree[A]) {
+sealed abstract class Tree[A: Manifest](var key: A, var left: Tree[A], var right: Tree[A]) {
 
   /**
    * Check to see if the tree is empty
@@ -160,6 +162,15 @@ sealed abstract class Tree[A](var key: A, var left: Tree[A], var right: Tree[A])
   }
 
   /**
+   * Inspired by https://www.interviewcake.com/question/java/second-largest-item-in-bst
+   *
+   * @param nTh the nth Number
+   */
+  def nthLargest(nTh: Int) = {
+    ???
+  }
+
+  /**
    * Finds the max node of the tree.
    *
    * @return
@@ -167,12 +178,49 @@ sealed abstract class Tree[A](var key: A, var left: Tree[A], var right: Tree[A])
   def maxTree: Tree[A] = {
     if (isEmpty)
       throw new UnsupportedOperationException("empty.max")
-    def doMax(tree: Tree[A], max: Tree[A]): Tree[A] = {
-      if (tree == null) max
-      else if (isLeaf(tree)) tree
-      else doMax(tree.right, max)
+    def doMax(tree: Tree[A]): Tree[A] = {
+      if (tree.right != null) doMax(tree.right)
+      else tree
     }
-    doMax(this, this)
+    doMax(this)
+  }
+
+  def inOrder = {
+    val result = new ListBuffer[A]
+    /* Given a binary tree, print its nodes in inorder*/
+    def doInOrder(node: Tree[A]) {
+      if (node.left != null)
+        doInOrder(node.left)
+
+      result += node.key
+
+      if (node.right != null)
+        doInOrder(node.right)
+    }
+    doInOrder(this)
+    result
+  }
+
+  def preOrder = {
+    val buffer = new ListBuffer[A]
+
+    val root = this
+
+    if (root == null) buffer
+
+    var stack = List.empty[Tree[A]]
+
+    stack = this :: stack
+
+    while (stack.nonEmpty) {
+      val n = stack.head
+      stack = stack.tail
+      buffer += n.key
+
+      if (n.right != null) stack = n.right :: stack
+      if (n.left != null) stack = n.left :: stack
+    }
+    buffer
   }
 
   /**
@@ -184,4 +232,4 @@ sealed abstract class Tree[A](var key: A, var left: Tree[A], var right: Tree[A])
 
 }
 
-class TreeNode[A](k: A, l: Tree[A] = null, r: Tree[A] = null) extends Tree[A](k, l, r)
+class TreeNode[A: Manifest](k: A, l: Tree[A] = null, r: Tree[A] = null) extends Tree[A](k, l, r)
