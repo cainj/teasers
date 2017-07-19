@@ -1,6 +1,7 @@
 package example.structures
 
 import scala.collection.mutable.ListBuffer
+import scala.util.Try
 
 /**
  * Trait for a Binary Search Tree
@@ -167,7 +168,20 @@ sealed abstract class Tree[A: Manifest](var key: A, var left: Tree[A], var right
    * @param nTh the nth Number
    */
   def nthLargest(nTh: Int) = {
-    ???
+    val result = new ListBuffer[A]
+    /* Given a binary tree, print its nodes in inorder*/
+    def doNthLargest(node: Tree[A]) {
+
+      if (node.right != null)
+        doNthLargest(node.right)
+
+      result += node.key
+
+      if (node.left != null)
+        doNthLargest(node.left)
+    }
+    doNthLargest(this)
+    Try { result(nTh) } getOrElse (throw new IllegalArgumentException(s"Tree is not large enough for the $nTh position."))
   }
 
   /**
@@ -204,10 +218,6 @@ sealed abstract class Tree[A: Manifest](var key: A, var left: Tree[A], var right
   def preOrder = {
     val buffer = new ListBuffer[A]
 
-    val root = this
-
-    if (root == null) buffer
-
     var stack = List.empty[Tree[A]]
 
     stack = this :: stack
@@ -219,6 +229,50 @@ sealed abstract class Tree[A: Manifest](var key: A, var left: Tree[A], var right
 
       if (n.right != null) stack = n.right :: stack
       if (n.left != null) stack = n.left :: stack
+    }
+    buffer
+  }
+
+  def postOrder = {
+    val buffer = new ListBuffer[A]
+
+    var stack = List.empty[Tree[A]]
+
+    stack = this :: stack
+
+    var prev: Tree[A] = null
+    while (stack.nonEmpty) {
+      val current = stack.head
+
+      /* go down the tree in search of a leaf an if so process it
+      and pop stack otherwise move down */
+      if (prev == null || prev.left == current || prev.right == current) {
+        if (current.left != null)
+          stack = current.left :: stack
+        else if (current.right != null)
+          stack = current.right :: stack
+        else {
+          stack = stack.tail
+          buffer += current.key
+        }
+
+        /* go up the tree from left node, if the child is right
+           push it onto stack otherwise process parent and pop
+           stack */
+      } else if (current.left == prev) {
+        if (current.right != null) stack = current.right :: stack
+        else {
+          stack = stack.tail
+          buffer += current.key
+        }
+
+        /* go up the tree from right node and after coming back
+         from right node process parent and pop stack */
+      } else if (current.right == prev) {
+        stack = stack.tail
+        buffer += current.key
+      }
+      prev = current
     }
     buffer
   }
