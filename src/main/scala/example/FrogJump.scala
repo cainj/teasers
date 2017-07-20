@@ -35,25 +35,27 @@ package example
 object FrogJump {
 
   def solution(x: Int, y: Int, d: Int): Int = {
-    if (x + d >= y) 1
+    if (x == y) 0
+    else if (x + d >= y) 1
     else {
-      val remainder = y % d
-      val i = y / d
-      if (remainder - x > 0) i + 1 else i
+      val remainder = y - x
+      val jump = remainder / d
+      val i = remainder % d
+      if (i > 0) 1 + jump else jump
     }
   }
 
   def main(args: Array[String]): Unit = {
     //Should pass
-    assert(solution(25, 75, 30) == 2)
+    println(solution(25, 75, 30) == 2)
 
-    assert(solution(25, 85, 30) == 2)
+    println(solution(25, 85, 30) == 2)
 
-    assert(solution(10, 85, 30) == 3)
+    println(solution(10, 85, 30) == 3)
 
-    assert(solution(100, 100, 100) == 1)
+    println(solution(100, 100, 100) == 0)
 
-    assert(solution(1, 95, 1) == 95)
+    println(solution(1, 95, 1) == 94)
 
   }
 
