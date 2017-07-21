@@ -55,17 +55,23 @@ object FrogRiverJmp {
 
   /**
    * Functional solving
-   *
+   * *  Works like a direct storing in a table
    * @param x
    * @param a
    * @return
    */
   def solutionF(x: Int, a: Array[Int]): Int = {
-    val jumps = (1 to x)
-    val list = jumps.foldLeft(List.empty[Int]) {
-      (acc, next) => a.indexOf(next) :: acc
+    var jumps = 0
+    (0 to x + 1).foldLeft(new Array[Int](x + 1)) {
+      (acc, next) =>
+        if (acc(a(next)) == 0) {
+          acc(a(next)) = a(next)
+          jumps += 1
+          if (jumps == x) return next
+        }
+        acc
     }
-    if (list.contains(-1)) -1 else list.max
+    -1
   }
 
   /**
