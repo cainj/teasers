@@ -62,7 +62,7 @@ object FrogRiverJmp {
    */
   def solutionF(x: Int, a: Array[Int]): Int = {
     var jumps = 0
-    (0 to x + 1).foldLeft(new Array[Int](x + 1)) {
+    (0 until a.length).foldLeft(new Array[Int](x + 1)) {
       (acc, next) =>
         if (acc(a(next)) == 0) {
           acc(a(next)) = a(next)
