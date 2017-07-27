@@ -1,8 +1,8 @@
 package hackerrank
 
 /**
-  *
-  */
+ *
+ */
 object InsertionSort {
 
   def main(args: Array[String]) {
@@ -14,7 +14,7 @@ object InsertionSort {
     }
 
     insertionSort(a)
-    println(a mkString(" "))
+    println(a mkString (" "))
   }
 
   def insertionSort(ar: Array[Int]): Unit = {

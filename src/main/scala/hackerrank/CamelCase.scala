@@ -1,9 +1,9 @@
 package hackerrank
 
 /**
-  * https://www.hackerrank.com/challenges/camelcase
-  *
-  */
+ * https://www.hackerrank.com/challenges/camelcase
+ *
+ */
 object CamelCase {
 
   def camelCase(s: String, result: Int): Int = {

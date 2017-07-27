@@ -1,8 +1,8 @@
 package hackerrank
 
 /**
-  * https://www.hackerrank.com/challenges/two-characters
-  */
+ * https://www.hackerrank.com/challenges/two-characters
+ */
 object TwoCharacters {
 
   def main(args: Array[String]) {
