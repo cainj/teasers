@@ -3,7 +3,7 @@ package hackerrank
 /**
  *
  */
-object QuickSort2 {
+object RuntimeSort {
 
   var swaps = 0
   var shifts = 0
