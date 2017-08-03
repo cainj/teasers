@@ -1,4 +1,4 @@
-package example
+package codility
 
 import scala.util.Try
 

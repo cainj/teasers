@@ -2,8 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="87de2cfc-9c3c-492a-a345-4bc21025bdda" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/hackerrank/CrosswordPuzzle.scala" afterPath="$PROJECT_DIR$/src/main/scala/hackerrank/CrosswordPuzzle.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/hackerrank/RecursiveDigit.scala" afterPath="$PROJECT_DIR$/src/main/scala/hackerrank/RecursiveDigit.scala" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/example/Balancer.scala" afterPath="$PROJECT_DIR$/src/main/scala/uber/Balancer.scala" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/example/Boggle.scala" afterPath="$PROJECT_DIR$/src/main/scala/uber/Boggle.scala" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/example/DiamondMine.scala" afterPath="$PROJECT_DIR$/src/main/scala/uber/DiamondMine.scala" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/example/FrogJump.scala" afterPath="$PROJECT_DIR$/src/main/scala/codility/FrogJump.scala" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/example/FrogRiverJmp.scala" afterPath="$PROJECT_DIR$/src/main/scala/codility/FrogRiverJmp.scala" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/example/KaratSuba.scala" afterPath="$PROJECT_DIR$/src/main/scala/example/recursion/KaratSuba.scala" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/example/MaxCounters.scala" afterPath="$PROJECT_DIR$/src/main/scala/codility/MaxCounters.scala" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/example/MissingInteger.scala" afterPath="$PROJECT_DIR$/src/main/scala/codility/MissingInteger.scala" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/example/PermCheck.scala" afterPath="$PROJECT_DIR$/src/main/scala/codility/PermCheck.scala" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/example/PermMiss.scala" afterPath="$PROJECT_DIR$/src/main/scala/codility/PermMiss.scala" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/example/TapeEquilibrium.scala" afterPath="$PROJECT_DIR$/src/main/scala/codility/TapeEquilibrium.scala" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/hackerrank/CamelCase.scala" afterPath="$PROJECT_DIR$/src/main/scala/hackerrank/algorithms/strings/CamelCase.scala" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/hackerrank/CrosswordPuzzle.scala" afterPath="$PROJECT_DIR$/src/main/scala/hackerrank/algorithms/recursion/CrosswordPuzzle.scala" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/hackerrank/InsertionSort.scala" afterPath="$PROJECT_DIR$/src/main/scala/hackerrank/algorithms/sort/InsertionSort.scala" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/hackerrank/RecursiveDigit.scala" afterPath="$PROJECT_DIR$/src/main/scala/hackerrank/algorithms/recursion/RecursiveDigit.scala" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/hackerrank/RuntimeSort.scala" afterPath="$PROJECT_DIR$/src/main/scala/hackerrank/algorithms/sort/RuntimeSort.scala" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/hackerrank/TwoCharacters.scala" afterPath="$PROJECT_DIR$/src/main/scala/hackerrank/algorithms/strings/TwoCharacters.scala" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/scala/example/BalancerSpec.scala" afterPath="$PROJECT_DIR$/src/test/scala/uber/BalancerSpec.scala" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/scala/example/BoggleSpec.scala" afterPath="$PROJECT_DIR$/src/test/scala/uber/BoggleSpec.scala" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/scala/example/DiamondMineSpec.scala" afterPath="$PROJECT_DIR$/src/test/scala/uber/DiamondMineSpec.scala" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/scala/example/FrogRiverJmpSpec.scala" afterPath="$PROJECT_DIR$/src/test/scala/codility/FrogRiverJmpSpec.scala" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/scala/example/MaxCountersSpec.scala" afterPath="$PROJECT_DIR$/src/test/scala/codility/MaxCountersSpec.scala" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/scala/example/PermCheckSpec.scala" afterPath="$PROJECT_DIR$/src/test/scala/codility/PermCheckSpec.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/test.iml" afterPath="$PROJECT_DIR$/src/test/test.iml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,57 +38,49 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Solution.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/hackerrank/Solution.scala">
+      <file leaf-file-name="MaxCountersSpec.scala" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/scala/codility/MaxCountersSpec.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+            <state relative-caret-position="135">
+              <caret line="9" column="10" lean-forward="false" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PermMiss.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/example/PermMiss.scala">
+      <file leaf-file-name="FrogRiverJmpSpec.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/scala/codility/FrogRiverJmpSpec.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="35" column="7" lean-forward="false" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PermCheck.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/example/PermCheck.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="62" column="49" lean-forward="true" selection-start-line="62" selection-start-column="49" selection-end-line="62" selection-end-column="49" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RecursiveDigit.scala" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/hackerrank/RecursiveDigit.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="2" lean-forward="false" selection-start-line="7" selection-start-column="2" selection-end-line="19" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CrosswordPuzzle.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/hackerrank/CrosswordPuzzle.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="79">
-              <caret line="140" column="2" lean-forward="false" selection-start-line="140" selection-start-column="2" selection-end-line="140" selection-end-column="2" />
+            <state relative-caret-position="270">
+              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding>
-                <element signature="e#20#60#0" expanded="true" />
-                <marker date="1501728399000" expanded="true" signature="4261:4705" ph="{...}" />
-                <marker date="1501728399000" expanded="true" signature="4426:4701" ph="{...}" />
-                <marker date="1501728399000" expanded="true" signature="4537:4695" ph="{...}" />
+                <marker date="1501730114000" expanded="true" signature="18:28" ph="/**...*/" />
+                <marker date="1501730114000" expanded="true" signature="83:656" ph="{...}" />
+                <marker date="1501730114000" expanded="true" signature="136:364" ph="{...}" />
+                <marker date="1501730114000" expanded="true" signature="429:654" ph="{...}" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.sbt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.sbt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FrogJump.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/codility/FrogJump.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="16" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -100,6 +115,23 @@
         <option value="$PROJECT_DIR$/src/main/scala/hackerrank/Solution.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/hackerrank/CrosswordPuzzle.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/hackerrank/RecursiveDigit.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/hackerrank/algorithims/strings/CamelCase.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/hackerrank/algorithims/strings/sort/InsertionSort.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/hackerrank/algorithims/strings/sort/RuntimeSort.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/hackerrank/algorithims/strings/TwoCharacters.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/hackerrank/algorithms/strings/TwoCharacters.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/hackerrank/algorithms/recursion/CrosswordPuzzle.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/hackerrank/algorithms/recursion/RecursiveDigit.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/example/codility/TapeEquilibrium.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/example/codility/FrogRiverJmp.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/example/codility/MissingInteger.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/example/codility/MaxCounters.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/uber/DiamondMine.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/example/recursion/KaratSuba.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/codility/PermCheckSpec.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/uber/DiamondMineSpec.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/codility/FrogRiverJmpSpec.scala" />
+        <option value="$PROJECT_DIR$/src/test/codility/FrogRiverJmpSpec.scala" />
       </list>
     </option>
   </component>
@@ -143,24 +175,22 @@
             <path>
               <item name="teasers" type="b2602c69:ProjectViewProjectNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="teasers" type="b2602c69:ProjectViewProjectNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="scala" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="teasers" type="b2602c69:ProjectViewProjectNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="scala" type="462c0819:PsiDirectoryNode" />
-              <item name="example" type="462c0819:PsiDirectoryNode" />
+              <item name="codility" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="teasers" type="b2602c69:ProjectViewProjectNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="teasers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="scala" type="462c0819:PsiDirectoryNode" />
-              <item name="hackerrank" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -176,11 +206,20 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/scala/hackerrank/algorithims/strings" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+      <recent name="hackerrank.algorithims.strings" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="hackerrank" />
       <recent name="example" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/scala" />
+      <recent name="$PROJECT_DIR$/src/test" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -296,12 +335,12 @@
       <workItem from="1501192181239" duration="3874000" />
       <workItem from="1501548797133" duration="12925000" />
       <workItem from="1501622695912" duration="53465000" />
-      <workItem from="1501727308519" duration="1139000" />
+      <workItem from="1501727308519" duration="2740000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71403000" />
+    <option name="totallyTimeSpent" value="73004000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="23" width="1132" height="633" extended-state="0" />
@@ -398,47 +437,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/example/KaratSuba.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="12" lean-forward="true" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/hackerrank/TwoCharacters.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="7" lean-forward="false" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/hackerrank/InsertionSort.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="7" lean-forward="false" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Solution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
-          <folding>
-            <element signature="e#217#234#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/example/DiamondMine.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="711">
-          <caret line="55" column="7" lean-forward="false" selection-start-line="55" selection-start-column="7" selection-end-line="55" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.12.3-sources.jar!/scala/collection/SeqLike.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="178">
@@ -453,47 +451,225 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/hackerrank/Solution.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/hackerrank/algorithms/strings/CamelCase.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        <state relative-caret-position="255">
+          <caret line="17" column="18" lean-forward="false" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/example/PermMiss.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/hackerrank/algorithims/strings/sort/InsertionSort.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
+        <state relative-caret-position="75">
+          <caret line="5" column="7" lean-forward="false" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/hackerrank/algorithims/strings/sort/RuntimeSort.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="5" column="7" lean-forward="false" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/hackerrank/algorithms/strings/TwoCharacters.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="7" lean-forward="false" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/hackerrank/algorithms/recursion/CrosswordPuzzle.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="7" lean-forward="false" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/hackerrank/algorithms/recursion/RecursiveDigit.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="7" lean-forward="false" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/hackerrank/Solution.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="7" lean-forward="false" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/codility/PermCheck.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="54" column="7" lean-forward="false" selection-start-line="54" selection-start-column="7" selection-end-line="54" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/codility/PermMiss.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
           <caret line="35" column="7" lean-forward="false" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/example/PermCheck.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/codility/TapeEquilibrium.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="62" column="49" lean-forward="true" selection-start-line="62" selection-start-column="49" selection-end-line="62" selection-end-column="49" />
+        <state relative-caret-position="171">
+          <caret line="51" column="7" lean-forward="false" selection-start-line="51" selection-start-column="7" selection-end-line="51" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/hackerrank/CrosswordPuzzle.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/codility/FrogRiverJmp.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="140" column="2" lean-forward="false" selection-start-line="140" selection-start-column="2" selection-end-line="140" selection-end-column="2" />
+        <state relative-caret-position="15">
+          <caret line="53" column="7" lean-forward="false" selection-start-line="53" selection-start-column="7" selection-end-line="53" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/codility/MissingInteger.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="31" column="7" lean-forward="false" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/codility/MaxCounters.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="7" lean-forward="false" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/example/structures/Queue.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/uber/Balancer.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="34" column="7" lean-forward="false" selection-start-line="34" selection-start-column="7" selection-end-line="34" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/uber/Boggle.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="9" column="7" lean-forward="false" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/uber/DiamondMine.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="55" column="7" lean-forward="false" selection-start-line="55" selection-start-column="7" selection-end-line="55" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/example/recursion/KaratSuba.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="20" lean-forward="false" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/codility/PermCheckSpec.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="6" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/uber/BalancerSpec.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/uber/DiamondMineSpec.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/uber/BoggleSpec.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/codility/FrogJump.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.sbt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#20#60#0" expanded="true" />
-            <marker date="1501728399000" expanded="true" signature="4261:4705" ph="{...}" />
-            <marker date="1501728399000" expanded="true" signature="4426:4701" ph="{...}" />
-            <marker date="1501728399000" expanded="true" signature="4537:4695" ph="{...}" />
+            <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/hackerrank/RecursiveDigit.scala">
+    <entry file="file://$PROJECT_DIR$/src/test/scala/codility/FrogRiverJmpSpec.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="2" lean-forward="false" selection-start-line="7" selection-start-column="2" selection-end-line="19" selection-end-column="3" />
+        <state relative-caret-position="270">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <marker date="1501730114000" expanded="true" signature="18:28" ph="/**...*/" />
+            <marker date="1501730114000" expanded="true" signature="83:656" ph="{...}" />
+            <marker date="1501730114000" expanded="true" signature="136:364" ph="{...}" />
+            <marker date="1501730114000" expanded="true" signature="429:654" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/codility/MaxCountersSpec.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="10" lean-forward="false" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
           <folding />
         </state>
       </provider>

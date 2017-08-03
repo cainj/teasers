@@ -1,4 +1,4 @@
-package example
+package uber
 
 import scala.annotation.tailrec
 

@@ -1,6 +1,4 @@
-package example
-
-import org.scalatest._
+package uber
 
 class DiamondMineSpec extends FlatSpec with Matchers {
   "The DiamondMine object" should "find max diamonds" in {

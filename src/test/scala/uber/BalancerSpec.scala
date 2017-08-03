@@ -1,6 +1,4 @@
-package example
-
-import org.scalatest._
+package uber
 
 class BalancerSpec extends FlatSpec with Matchers {
   "The Balancer object" should "find words" in {

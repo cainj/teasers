@@ -1,6 +1,4 @@
-package hackerrank
-
-import hackerrank.CrosswordPuzzle.Puzzle
+package hackerrank.algorithms.recursion
 
 import scala.util.Try
 

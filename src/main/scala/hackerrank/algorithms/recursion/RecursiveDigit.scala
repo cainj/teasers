@@ -1,4 +1,4 @@
-package hackerrank
+package hackerrank.algorithms.recursion
 
 /**
  * Hacker Rank Recursive Digit

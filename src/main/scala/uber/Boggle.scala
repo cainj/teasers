@@ -1,4 +1,4 @@
-package example
+package uber
 
 import scala.util.{ Failure, Success, Try }
 

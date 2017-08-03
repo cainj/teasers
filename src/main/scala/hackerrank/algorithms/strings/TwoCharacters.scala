@@ -1,4 +1,4 @@
-package hackerrank
+package hackerrank.algorithms.strings
 
 /**
  * https://www.hackerrank.com/challenges/two-characters

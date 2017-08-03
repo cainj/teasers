@@ -1,4 +1,4 @@
-package example
+package codility
 
 /**
  * A non-empty zero-indexed array A consisting of N integers is given. Array A represents numbers on a tape.

@@ -1,6 +1,4 @@
-package example
-
-import org.scalatest.{ Matchers, FlatSpec }
+package codility
 
 /**
  *
