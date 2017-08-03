@@ -1,6 +1,7 @@
 package hackerrank.algorithms.recursion
 
 import scala.util.Try
+import scala.language.postfixOps
 
 /**
  * HackerRank CrosswordPuzzle
@@ -17,13 +18,18 @@ object CrosswordPuzzle {
   type Path = List[Slot]
 
   /**
-   * Find all the available slots in the puzzle
+   * Find only starting slots
    *
    * @param crosswordPuzzle The crossword puzzle
    * @return
    */
-  def findSlots(crosswordPuzzle: Array[Array[Char]]): Set[Slot] = {
-    (for { i <- 0 until 10; j <- 0 until 10; if crosswordPuzzle(i)(j) == '-' } yield Slot(j, i)).toSet
+  def startingSlots(crosswordPuzzle: Array[Array[Char]]): List[Slot] = {
+    (for {
+      i <- 0 until 10
+      j <- 0 until 10
+      slot = Slot(j, i)
+      if slot.isStartSlot(crosswordPuzzle)
+    } yield slot).toList
   }
 
   /**
@@ -35,54 +41,49 @@ object CrosswordPuzzle {
   def findDirection(slots: Path): String = {
     if (slots.length < 2) ""
     else {
-      val slope = slots.takeRight(2) reduceLeft { (acc, next) => Slot(acc.x - next.x, next.y) }
+      val slope = slots.takeRight(2) reduceLeft { (acc, next) =>
+        Slot(acc.x - next.x, next.y)
+      }
       if (Math.abs(slope.x) > 0) "right" else "down"
     }
   }
 
-  def findPaths(slots: Path, puzzle: Puzzle, result: Path): List[Path] = slots match {
-    case Nil => List(result)
-    case _ =>
-      slots.flatMap {
-        s => findPaths(s.availableSlots(puzzle, findDirection(result)), puzzle, result :+ s)
-      }
-
-  }
+  def buildPath(slot: Slot, puzzle: Puzzle, result: Path): List[Path] =
+    slot.availableSlots(puzzle, findDirection(slot :: result)) match {
+      case Nil => List(result :+ slot)
+      case x => x flatMap { buildPath(_, puzzle, result :+ slot) }
+    }
 
   /**
-   * Remove the partial paths
-   *
-   * @param paths
-   * @param result
-   * @return
-   */
-  def removePartialPaths(paths: List[Path], result: List[Path]): List[Path] = {
-    paths match {
-      case Nil => result
-      case head :: tail =>
-        tail find (head.intersect(_) == head) match {
-          case Some(_) => removePartialPaths(tail, result)
-          case None => removePartialPaths(tail, head :: result)
-        }
-    }
-  }
+    * Retuns as a stream b/c we want to quit once we've found one that works!
+    *
+    * @param words the words
+    * @param paths the paths for the slots
+    * @param result the guesses
+    * @return
+    */
+  def guesses(words: Words, paths: List[Path], result: List[Guess]): Stream[List[Guess]] = {
 
-  def guesses(words: Words, paths: List[Path], result: List[Guess]): Set[List[Guess]] = {
-
-    def makeGuess(words: Words, paths: List[Path], result: List[Guess]): List[Guess] =
+    def makeGuess(words: Words, paths: List[Path], result: List[Guess]): List[Guess] = {
+      println("hh")
       (words, paths) match {
         case (Nil, Nil) => result
         case (_, Nil) => Nil
         case (Nil, _) => Nil
         case (w, p) =>
-          val (l, r) = p span { w.head.length != _.length }
+          val (l, r) = p span {
+            w.head.length != _.length
+          }
           if (r.nonEmpty) makeGuess(w.tail, l ++ r.tail, zip(w.head, r.head) :: result)
           else Nil
       }
-    (for {
-      combo <- words.permutations.toList
-    } yield makeGuess(combo, paths, Nil)).toSet
+    }
+
+    for {
+      combo <- words.permutations.toStream
+    } yield makeGuess(combo, paths, Nil)
   }
+
 
   def solve(guesses: List[Guess], crosswordPuzzle: Array[Array[Char]], words: Words): Boolean = {
     guesses.foldLeft(List.empty[List[Slot]]) { (answers, next) =>
@@ -117,23 +118,20 @@ object CrosswordPuzzle {
     val crosswordPuzzle = new Array[Array[Char]](10)
     for (i <- 0 until 10) { crosswordPuzzle(i) = sc.next.toCharArray }
     val words = sc.next().split(";") toList
-    val sizes = words.map(_.length)
     //given the crossword puzzle, find all available paths
     val paths = for {
-      slot <- findSlots(crosswordPuzzle)
-      path <- findPaths(List(slot), crosswordPuzzle, Nil)
-      if sizes.contains(path.size)
+      slot <- startingSlots(crosswordPuzzle)
+      path <- buildPath(slot, crosswordPuzzle, Nil)
     } yield path
 
-    val answer = for {
-      guess <- guesses(words, removePartialPaths(paths.toList.sortWith(_.length < _.length), Nil), Nil)
-      if solve(guess, crosswordPuzzle, words)
-    } yield {
-      val puzzle = new Array[Array[Char]](10)
-      crosswordPuzzle.copyToArray(puzzle)
-      puzzle.map(new String(_)).reduce(_ + "\n" + _)
+    val answer = guesses(words, paths, Nil) collectFirst {
+      case guess if solve(guess, crosswordPuzzle, words) =>
+        val puzzle = new Array[Array[Char]](10)
+        crosswordPuzzle.copyToArray(puzzle)
+        puzzle.map(new String(_)).reduce(_ + "\n" + _)
     }
-    println(answer.headOption getOrElse (throw new IllegalStateException("Unsolvable puzzle")))
+
+    println(answer getOrElse (throw new IllegalStateException("Unsolvable puzzle")))
   }
   /**
    * Represents the slots on the crossword puzzle
@@ -146,14 +144,43 @@ object CrosswordPuzzle {
 
     def RIGHT: Slot = this.copy(x + 1, y)
 
+    def UP: Slot = this.copy(x, y - 1)
+
+    def LEFT: Slot = this.copy(x - 1, y)
+
+    /**
+      * !!Hack!!!
+      * @param puzzle
+      * @return
+      */
+    def isStartSlot(puzzle: Puzzle): Boolean = {
+      val direction = (look(UP, puzzle), look(DOWN, puzzle), look(LEFT, puzzle), look(RIGHT, puzzle)) match {
+        case (true, true, false, false) => false
+        case (true, false, false, false) => false
+        case (false, false, true, true) => false
+        case (false, true, false, false) => true
+        case (true, true, false, true) => true
+        case (false, true, true, false) => true
+        case (false, false, false, true) => true
+        case (false, true, true, true) => true
+        case (true, false, false, true) => true
+        case _ => false
+      }
+      direction && puzzle(y)(x) == '-'
+    }
+
+    private def look(slot: Slot, puzzle: Puzzle) = Try { puzzle(slot.y)(slot.x) == '-' } getOrElse false
+
     def availableSlots(puzzle: Puzzle, direction: String = ""): List[Slot] = {
-
-      def look(slot: Slot) = Try { puzzle(slot.y)(slot.x) == '-' } getOrElse (false)
-
       direction match {
-        case "" => List(DOWN, RIGHT) filter (look)
-        case "down" => List(DOWN) filter (look)
-        case "right" => List(RIGHT) filter (look)
+        case "" =>
+          val ways = List(DOWN, RIGHT, UP, LEFT) filter (look(_, puzzle))
+          if (ways.length > 2)
+            if (ways.diff(List(DOWN, RIGHT, LEFT)).isEmpty) List(DOWN) filter (look(_, puzzle))
+            else List(RIGHT) filter (look(_, puzzle))
+          else ways filterNot (UP==) filterNot (LEFT==)
+        case "down" => List(DOWN) filter (look(_, puzzle))
+        case "right" => List(RIGHT) filter (look(_, puzzle))
       }
     }
   }
