@@ -4,11 +4,10 @@ import hackerrank.CrosswordPuzzle.Puzzle
 
 import scala.util.Try
 
-
 /**
-  * HackerRank CrosswordPuzzle
-  * 
-  */
+ * HackerRank CrosswordPuzzle
+ *
+ */
 object CrosswordPuzzle {
 
   type Guess = List[(Char, Slot)]
@@ -53,12 +52,12 @@ object CrosswordPuzzle {
   }
 
   /**
-    * Remove the partial paths
-    *
-    * @param paths
-    * @param result
-    * @return
-    */
+   * Remove the partial paths
+   *
+   * @param paths
+   * @param result
+   * @return
+   */
   def removePartialPaths(paths: List[Path], result: List[Path]): List[Path] = {
     paths match {
       case Nil => result
@@ -95,24 +94,24 @@ object CrosswordPuzzle {
   }
 
   /**
-    * Check to see if the guesses are correct
-    *
-    * @param guesses The guesses
-    * @param puzzle The puzzle
-    * @param words The words given
-    * @return
-    */
+   * Check to see if the guesses are correct
+   *
+   * @param guesses The guesses
+   * @param puzzle The puzzle
+   * @param words The words given
+   * @return
+   */
   private def check(guesses: List[Slot], puzzle: Puzzle, words: Words): Boolean = {
     val chars = guesses map { guess => puzzle(guess.y)(guess.x) }
     words.contains(new String(chars.toArray))
   }
 
   /**
-    * Create a guess
-    * @param word the word
-    * @param path the path from the puzzle
-    * @return
-    */
+   * Create a guess
+   * @param word the word
+   * @param path the path from the puzzle
+   * @return
+   */
   private def zip(word: String, path: Path): Guess = path.zipWithIndex.map { p => (word(p._2), p._1) }
 
   def main(args: Array[String]) {
@@ -138,27 +137,27 @@ object CrosswordPuzzle {
     }
     println(answer.headOption getOrElse (throw new IllegalStateException("Unsolvable puzzle")))
   }
-}
+  /**
+    * Represents the slots on the crossword puzzle
+    * @param x - x axis
+    * @param y - y axis
+    */
+  case class Slot(x: Int, y: Int) {
 
-/**
- * Represents the slots on the crossword puzzle
- * @param x - x axis
- * @param y - y axis
- */
-case class Slot(x: Int, y: Int) {
+    def DOWN: Slot = this.copy(x, y + 1)
 
-  def DOWN: Slot = this.copy(x, y + 1)
+    def RIGHT: Slot = this.copy(x + 1, y)
 
-  def RIGHT: Slot = this.copy(x + 1, y)
+    def availableSlots(puzzle: Puzzle, direction: String = ""): List[Slot] = {
 
-  def availableSlots(puzzle: Puzzle, direction: String = ""): List[Slot] = {
+      def look(slot: Slot) = Try { puzzle(slot.y)(slot.x) == '-' } getOrElse (false)
 
-    def look(slot: Slot) = Try { puzzle(slot.y)(slot.x) == '-' } getOrElse (false)
-
-    direction match {
-      case "" => List(DOWN, RIGHT) filter (look)
-      case "down" => List(DOWN) filter (look)
-      case "right" => List(RIGHT) filter (look)
+      direction match {
+        case "" => List(DOWN, RIGHT) filter (look)
+        case "down" => List(DOWN) filter (look)
+        case "right" => List(RIGHT) filter (look)
+      }
     }
   }
 }
+
