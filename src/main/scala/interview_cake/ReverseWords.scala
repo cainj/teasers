@@ -1,14 +1,14 @@
 package interview_cake
 
 /**
-  * Inspired by: https://www.interviewcake.com/question/java/reverse-words
-  * 
-  * Your team is scrambling to decipher a recent message, worried it's a plot
-  * to break into a major European National Cake Vault. The message has been mostly deciphered,
-  * but all the words are backwards! Your colleagues have handed off the last step to you.
-  * Write a function reverseWords() that takes a string message and reverses the order of t
-  * he words in-place.
-  */
+ * Inspired by: https://www.interviewcake.com/question/java/reverse-words
+ *
+ * Your team is scrambling to decipher a recent message, worried it's a plot
+ * to break into a major European National Cake Vault. The message has been mostly deciphered,
+ * but all the words are backwards! Your colleagues have handed off the last step to you.
+ * Write a function reverseWords() that takes a string message and reverses the order of t
+ * he words in-place.
+ */
 object ReverseWords {
 
   def reverseWords(n: Array[String]): String = {
