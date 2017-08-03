@@ -1,40 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="87de2cfc-9c3c-492a-a345-4bc21025bdda" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/example/Balancer.scala" afterPath="$PROJECT_DIR$/src/main/scala/uber/Balancer.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/example/Boggle.scala" afterPath="$PROJECT_DIR$/src/main/scala/uber/Boggle.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/example/DiamondMine.scala" afterPath="$PROJECT_DIR$/src/main/scala/uber/DiamondMine.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/example/FrogJump.scala" afterPath="$PROJECT_DIR$/src/main/scala/codility/FrogJump.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/example/FrogRiverJmp.scala" afterPath="$PROJECT_DIR$/src/main/scala/codility/FrogRiverJmp.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/example/KaratSuba.scala" afterPath="$PROJECT_DIR$/src/main/scala/example/recursion/KaratSuba.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/example/MaxCounters.scala" afterPath="$PROJECT_DIR$/src/main/scala/codility/MaxCounters.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/example/MissingInteger.scala" afterPath="$PROJECT_DIR$/src/main/scala/codility/MissingInteger.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/example/PermCheck.scala" afterPath="$PROJECT_DIR$/src/main/scala/codility/PermCheck.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/example/PermMiss.scala" afterPath="$PROJECT_DIR$/src/main/scala/codility/PermMiss.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/example/TapeEquilibrium.scala" afterPath="$PROJECT_DIR$/src/main/scala/codility/TapeEquilibrium.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/hackerrank/CamelCase.scala" afterPath="$PROJECT_DIR$/src/main/scala/hackerrank/algorithms/strings/CamelCase.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/hackerrank/CrosswordPuzzle.scala" afterPath="$PROJECT_DIR$/src/main/scala/hackerrank/algorithms/recursion/CrosswordPuzzle.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/hackerrank/InsertionSort.scala" afterPath="$PROJECT_DIR$/src/main/scala/hackerrank/algorithms/sort/InsertionSort.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/hackerrank/RecursiveDigit.scala" afterPath="$PROJECT_DIR$/src/main/scala/hackerrank/algorithms/recursion/RecursiveDigit.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/hackerrank/RuntimeSort.scala" afterPath="$PROJECT_DIR$/src/main/scala/hackerrank/algorithms/sort/RuntimeSort.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/hackerrank/TwoCharacters.scala" afterPath="$PROJECT_DIR$/src/main/scala/hackerrank/algorithms/strings/TwoCharacters.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/scala/example/BalancerSpec.scala" afterPath="$PROJECT_DIR$/src/test/scala/uber/BalancerSpec.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/scala/example/BoggleSpec.scala" afterPath="$PROJECT_DIR$/src/test/scala/uber/BoggleSpec.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/scala/example/DiamondMineSpec.scala" afterPath="$PROJECT_DIR$/src/test/scala/uber/DiamondMineSpec.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/scala/example/FrogRiverJmpSpec.scala" afterPath="$PROJECT_DIR$/src/test/scala/codility/FrogRiverJmpSpec.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/scala/example/MaxCountersSpec.scala" afterPath="$PROJECT_DIR$/src/test/scala/codility/MaxCountersSpec.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/scala/example/PermCheckSpec.scala" afterPath="$PROJECT_DIR$/src/test/scala/codility/PermCheckSpec.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/test.iml" afterPath="$PROJECT_DIR$/src/test/test.iml" />
-    </list>
+    <list default="true" id="87de2cfc-9c3c-492a-a345-4bc21025bdda" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/project/project/target/" />
+    <ignored path="$PROJECT_DIR$/project/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="SBT">
+      <state>
+        <projects_view />
+      </state>
+    </system>
   </component>
   <component name="FileEditorManager">
     <leaf>
@@ -170,25 +159,36 @@
           <expand>
             <path>
               <item name="teasers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="teasers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="teasers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="teasers" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="teasers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="teasers" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="teasers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="teasers" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="scala" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="teasers" type="b2602c69:ProjectViewProjectNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="scala" type="462c0819:PsiDirectoryNode" />
-              <item name="codility" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="teasers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="teasers" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="teasers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="teasers" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="scala" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -318,6 +318,31 @@
     </configuration>
   </component>
   <component name="SbtLocalSettings">
+    <option name="lastUpdateTimestamp" value="1501730131480" />
+    <option name="availableProjects">
+      <map>
+        <entry>
+          <key>
+            <ExternalProjectPojo>
+              <option name="name" value="Solver" />
+              <option name="path" value="$PROJECT_DIR$" />
+            </ExternalProjectPojo>
+          </key>
+          <value>
+            <list>
+              <ExternalProjectPojo>
+                <option name="name" value="root" />
+                <option name="path" value="$PROJECT_DIR$" />
+              </ExternalProjectPojo>
+              <ExternalProjectPojo>
+                <option name="name" value="root-build" />
+                <option name="path" value="$PROJECT_DIR$/project" />
+              </ExternalProjectPojo>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="externalProjectsViewState">
       <projects_view />
     </option>
@@ -335,19 +360,19 @@
       <workItem from="1501192181239" duration="3874000" />
       <workItem from="1501548797133" duration="12925000" />
       <workItem from="1501622695912" duration="53465000" />
-      <workItem from="1501727308519" duration="2740000" />
+      <workItem from="1501727308519" duration="2817000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73004000" />
+    <option name="totallyTimeSpent" value="73081000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="23" width="1132" height="633" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="SBT" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -358,7 +383,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
