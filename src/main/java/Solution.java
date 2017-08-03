@@ -1,71 +1,26 @@
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class Solution {
 
-    public Solution() {}
-
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        Solution solution = new Solution();
-
-        int size = scanner.nextInt();
-        int[] array = new int[size];
-
-        int index = 0;
-        while (scanner.hasNextInt()) {
-            array[index++] = scanner.nextInt();
+    public static void main(String []argh){
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        Map<String, Integer> phoneBook = new HashMap<String, Integer>();
+        for(int i = 0; i < n; i++){
+            String name = in.next();
+            int phone = in.nextInt();
+            // Write code here
+            phoneBook.put(name, phone);
         }
-
-        solution.quicksort(array, 0, array.length);
-    }
-
-    public void quicksort(int[] array, int left, int right) {
-
-        if (right - left >= 2) {
-            int pivot = partition(array, left, right);
-            quicksort(array, left, pivot);
-            quicksort(array, (pivot + 1), right);
-            print(array, left, right);
-        }
-    }
-
-    public int partition(int[] array, int left, int right) {
-
-        int pivot = array[left];
-        List<Integer> smallerElements = new ArrayList<Integer>(array.length);
-        List<Integer> largerElements = new ArrayList<Integer>(array.length);
-
-        for (int i = left + 1; i < right; ++i) {
-            if (array[i] < pivot) {
-                smallerElements.add(array[i]);
+        while(in.hasNext()){
+            String s = in.next();
+            // Write code here
+            if (phoneBook.containsKey(s)) {
+                System.out.println(s + "=" + phoneBook.get(s));
             } else {
-                largerElements.add(array[i]);
+                System.out.println("Not found");
             }
         }
-
-        for (int i = 0; i < smallerElements.size(); ++i) {
-            array[left + i] = smallerElements.get(i);
-        }
-
-        array[left + smallerElements.size()] = pivot;
-
-        for (int i = 0; i < largerElements.size(); ++i) {
-            array[left + smallerElements.size() + 1 + i] = largerElements.get(i);
-        }
-
-        return left + smallerElements.size();
-    }
-
-    private void print(int[] array, int left, int right) {
-        for (int i = left; i < right; ++i) {
-            print(array[i]);
-        }
-        System.out.println("");
-    }
-
-    private void print(int element) {
-        System.out.print(Integer.toString(element) + " ");
+        in.close();
     }
 }
