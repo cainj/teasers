@@ -55,13 +55,13 @@ object CrosswordPuzzle {
     }
 
   /**
-    * Retuns as a stream b/c we want to quit once we've found one that works!
-    *
-    * @param words the words
-    * @param paths the paths for the slots
-    * @param result the guesses
-    * @return
-    */
+   * Retuns as a stream b/c we want to quit once we've found one that works!
+   *
+   * @param words the words
+   * @param paths the paths for the slots
+   * @param result the guesses
+   * @return
+   */
   def guesses(words: Words, paths: List[Path], result: List[Guess]): Stream[List[Guess]] = {
 
     def makeGuess(words: Words, paths: List[Path], result: List[Guess]): List[Guess] = {
@@ -82,7 +82,6 @@ object CrosswordPuzzle {
       combo <- words.permutations.toStream
     } yield makeGuess(combo, paths, Nil)
   }
-
 
   def solve(guesses: List[Guess], crosswordPuzzle: Array[Array[Char]], words: Words): Boolean = {
     guesses.foldLeft(List.empty[List[Slot]]) { (answers, next) =>
@@ -148,10 +147,10 @@ object CrosswordPuzzle {
     def LEFT: Slot = this.copy(x - 1, y)
 
     /**
-      * !!Hack!!!
-      * @param puzzle
-      * @return
-      */
+     * !!Hack!!!
+     * @param puzzle
+     * @return
+     */
     def isStartSlot(puzzle: Puzzle): Boolean = {
       val direction = (look(UP, puzzle), look(DOWN, puzzle), look(LEFT, puzzle), look(RIGHT, puzzle)) match {
         case (true, true, false, false) => false
