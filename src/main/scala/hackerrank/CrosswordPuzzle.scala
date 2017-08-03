@@ -138,10 +138,10 @@ object CrosswordPuzzle {
     println(answer.headOption getOrElse (throw new IllegalStateException("Unsolvable puzzle")))
   }
   /**
-    * Represents the slots on the crossword puzzle
-    * @param x - x axis
-    * @param y - y axis
-    */
+   * Represents the slots on the crossword puzzle
+   * @param x - x axis
+   * @param y - y axis
+   */
   case class Slot(x: Int, y: Int) {
 
     def DOWN: Slot = this.copy(x, y + 1)

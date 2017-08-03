@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="87de2cfc-9c3c-492a-a345-4bc21025bdda" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/hackerrank/RecursiveDigit.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/hackerrank/CrosswordPuzzle.scala" afterPath="$PROJECT_DIR$/src/main/scala/hackerrank/CrosswordPuzzle.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/hackerrank/Solution.scala" afterPath="$PROJECT_DIR$/src/main/scala/hackerrank/Solution.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/hackerrank/RecursiveDigit.scala" afterPath="$PROJECT_DIR$/src/main/scala/hackerrank/RecursiveDigit.scala" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,23 +45,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RecursiveDigit.scala" pinned="false" current-in-tab="false">
+      <file leaf-file-name="RecursiveDigit.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/hackerrank/RecursiveDigit.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="45" lean-forward="true" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
+            <state relative-caret-position="105">
+              <caret line="7" column="2" lean-forward="false" selection-start-line="7" selection-start-column="2" selection-end-line="19" selection-end-column="3" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CrosswordPuzzle.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CrosswordPuzzle.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/hackerrank/CrosswordPuzzle.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="79">
               <caret line="140" column="2" lean-forward="false" selection-start-line="140" selection-start-column="2" selection-end-line="140" selection-end-column="2" />
               <folding>
                 <element signature="e#20#60#0" expanded="true" />
+                <marker date="1501728399000" expanded="true" signature="4261:4705" ph="{...}" />
+                <marker date="1501728399000" expanded="true" signature="4426:4701" ph="{...}" />
+                <marker date="1501728399000" expanded="true" signature="4537:4695" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -295,12 +296,12 @@
       <workItem from="1501192181239" duration="3874000" />
       <workItem from="1501548797133" duration="12925000" />
       <workItem from="1501622695912" duration="53465000" />
-      <workItem from="1501727308519" duration="870000" />
+      <workItem from="1501727308519" duration="1139000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71134000" />
+    <option name="totallyTimeSpent" value="71403000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="23" width="1132" height="633" extended-state="0" />
@@ -476,21 +477,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/hackerrank/RecursiveDigit.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="45" lean-forward="true" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/hackerrank/CrosswordPuzzle.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="79">
           <caret line="140" column="2" lean-forward="false" selection-start-line="140" selection-start-column="2" selection-end-line="140" selection-end-column="2" />
           <folding>
             <element signature="e#20#60#0" expanded="true" />
+            <marker date="1501728399000" expanded="true" signature="4261:4705" ph="{...}" />
+            <marker date="1501728399000" expanded="true" signature="4426:4701" ph="{...}" />
+            <marker date="1501728399000" expanded="true" signature="4537:4695" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/hackerrank/RecursiveDigit.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="2" lean-forward="false" selection-start-line="7" selection-start-column="2" selection-end-line="19" selection-end-column="3" />
+          <folding />
         </state>
       </provider>
     </entry>

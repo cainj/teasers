@@ -5,8 +5,8 @@ package hackerrank
  */
 object RecursiveDigit {
 
-  def superDigit(n: String, result: Int, initial: Boolean = false): Int = {
-    if ((initial && n == "") || (n == "" && result < 10)) result.toInt
+  def superDigit(n: String, result: BigInt, initial: Boolean = false): BigInt = {
+    if ((initial && n == "") || (n == "" && result < 10)) result
     else if (n == "") superDigit(result.toString, 0, initial)
     else superDigit(n.tail, result + n.head.toString.toInt, initial)
   }
