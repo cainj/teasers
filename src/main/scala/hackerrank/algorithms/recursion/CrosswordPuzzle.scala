@@ -65,7 +65,6 @@ object CrosswordPuzzle {
   def guesses(words: Words, paths: List[Path], result: List[Guess]): Stream[List[Guess]] = {
 
     def makeGuess(words: Words, paths: List[Path], result: List[Guess]): List[Guess] = {
-      println("hh")
       (words, paths) match {
         case (Nil, Nil) => result
         case (_, Nil) => Nil
