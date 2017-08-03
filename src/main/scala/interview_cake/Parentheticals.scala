@@ -11,7 +11,7 @@ package interview_cake
  */
 object Parentheticals {
 
-  def parentheticals(sentence: String, index: Int): Int = {
+  def parentheticalsWithStack(sentence: String, index: Int): Int = {
     var i = 0
     var x = 0
     var stack = List.empty[(Int, Char)]
@@ -26,6 +26,18 @@ object Parentheticals {
       i += 1
     }
     x
+  }
+
+  def parentheticals(sentence: String, index: Int): Int = {
+    var i = index
+    var counter = 0
+    while (i != sentence.length) {
+      if (sentence(i) == '(') counter += 1
+      if (sentence(i) == ')') counter -= 1
+      if (counter == 0) return i
+      i += 1
+    }
+    -1
   }
 
   def main(args: Array[String]) {
