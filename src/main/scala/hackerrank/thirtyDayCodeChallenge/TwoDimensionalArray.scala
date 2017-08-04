@@ -22,7 +22,7 @@ package hackerrank.thirtyDayCodeChallenge
   * Task
   * Calculate the hourglass sum for every hourglass in A, then print the maximum hourglass sum.
   */
-object TwoDimensioalArray {
+object TwoDimensionalArray {
 
   type Grid = Array[Array[Int]]
 
@@ -49,10 +49,10 @@ object TwoDimensioalArray {
     }).toList
   }
 
-  private def createHourGlass(threeByThree: Grid, slice: Int): HourGlass = {
-    val top = for { i <- 0 until slice} yield threeByThree(0)(i)
-    val bottom = for { i <- 0 until slice } yield threeByThree(2)(i)
-    val middle = threeByThree(1)(1)
+  private def createHourGlass(grid: Grid, slice: Int): HourGlass = {
+    val top = for { i <- 0 until slice} yield grid(0)(i)
+    val bottom = for { i <- 0 until slice } yield grid(2)(i)
+    val middle = grid(slice / 2)(slice / 2)
     HourGlass(top.toArray, middle, bottom.toArray)
   }
 
