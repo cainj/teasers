@@ -1,27 +1,27 @@
 package hackerrank.thirtyDayCodeChallenge
 
 /**
-  * https://www.hackerrank.com/challenges/30-2d-arrays/problem
-  *
-  * Objective
-  * Today, we're building on our knowledge of Arrays by adding another dimension. Check out the Tutorial tab for learning materials and an instructional video!
-  * Context
-  * Given a  2D Array, :
-  * 1 1 1 0 0 0
-  * 0 1 0 0 0 0
-  * 1 1 1 0 0 0
-  * 0 0 0 0 0 0
-  * 0 0 0 0 0 0
-  * 0 0 0 0 0 0
-  * We define an hourglass in  to be a subset of values with indices falling in this pattern in 's graphical representation:
-      a b c
-       d
-     e f g
-  *
-  * There are  hourglasses in A, and an hourglass sum is the sum of an hourglass' values.
-  * Task
-  * Calculate the hourglass sum for every hourglass in A, then print the maximum hourglass sum.
-  */
+ * https://www.hackerrank.com/challenges/30-2d-arrays/problem
+ *
+ * Objective
+ * Today, we're building on our knowledge of Arrays by adding another dimension. Check out the Tutorial tab for learning materials and an instructional video!
+ * Context
+ * Given a  2D Array, :
+ * 1 1 1 0 0 0
+ * 0 1 0 0 0 0
+ * 1 1 1 0 0 0
+ * 0 0 0 0 0 0
+ * 0 0 0 0 0 0
+ * 0 0 0 0 0 0
+ * We define an hourglass in  to be a subset of values with indices falling in this pattern in 's graphical representation:
+ * a b c
+ * d
+ * e f g
+ *
+ * There are  hourglasses in A, and an hourglass sum is the sum of an hourglass' values.
+ * Task
+ * Calculate the hourglass sum for every hourglass in A, then print the maximum hourglass sum.
+ */
 object TwoDimensionalArray {
 
   type Grid = Array[Array[Int]]
@@ -50,7 +50,7 @@ object TwoDimensionalArray {
   }
 
   private def createHourGlass(grid: Grid, slice: Int): HourGlass = {
-    val top = for { i <- 0 until slice} yield grid(0)(i)
+    val top = for { i <- 0 until slice } yield grid(0)(i)
     val bottom = for { i <- 0 until slice } yield grid(2)(i)
     val middle = grid(slice / 2)(slice / 2)
     HourGlass(top.toArray, middle, bottom.toArray)
