@@ -13,7 +13,7 @@ object GameOfThrones1 {
 
     s.toList.permutations.map { _.mkString } find {
       letters => letters.reverse == letters
-    } map { _ => println("Yes") } getOrElse println("No")
+    } map { _ => println("YES") } getOrElse println("NO")
   }
 
   /**
