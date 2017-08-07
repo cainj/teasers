@@ -1,6 +1,6 @@
-package hackerrank
+package example.sorting
 
-object Solution {
+object NumberOfInversions {
 
   def numberOfInversions(ints: List[Int]): Int = {
     var numberOfInversions = 0
