@@ -1,4 +1,6 @@
-import java.util.*;
+package hackerrank.thirtyDaysOfCode;
+
+import java.util.Scanner;
 
 class Node {
     int data;
@@ -12,7 +14,7 @@ class Node {
 class Solution {
 
 
-    public static  Node insert(Node head,int data) {
+    public static Node insert(Node head, int data) {
         //Complete this method
         if(head == null){
             Node node = new Node(data);
