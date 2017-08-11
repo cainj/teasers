@@ -1,16 +1,14 @@
-package hackerrank
+package hackerrank.thirtyDayCodeChallenge
 
 import java.util.Scanner
 
-import scala.collection.mutable
-import scala.collection.mutable.Stack
-import scala.collection.mutable.Queue
+import scala.collection.mutable.{Queue, Stack}
 
 object Solution {
 
   var queue = new Queue[Char]()
   var stack = new Stack[Char]()
-  
+
   def palidrone(s: String, acc: List[Char]): List[Char] = {
     if (s.isEmpty) acc
     else palidrone(s.tail, s.head :: acc)
