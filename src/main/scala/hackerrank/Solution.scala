@@ -10,13 +10,13 @@ object Solution {
 
   var queue = new Queue[Char]()
   var stack = new Stack[Char]()
-  
+
   def palidrone(s: String, acc: List[Char]): List[Char] = {
     if (s.isEmpty) acc
     else palidrone(s.tail, s.head :: acc)
   }
 
-  def pushCharacter(c: Char){ stack.push(c) }
+  def pushCharacter(c: Char) { stack.push(c) }
 
   def enqueueCharacter(c: Char) = queue.enqueue(c)
 

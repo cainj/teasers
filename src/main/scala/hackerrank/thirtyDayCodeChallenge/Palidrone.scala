@@ -2,7 +2,7 @@ package hackerrank.thirtyDayCodeChallenge
 
 import java.util.Scanner
 
-import scala.collection.mutable.{Queue, Stack}
+import scala.collection.mutable.{ Queue, Stack }
 
 object Solution {
 
@@ -14,7 +14,7 @@ object Solution {
     else palidrone(s.tail, s.head :: acc)
   }
 
-  def pushCharacter(c: Char){ stack.push(c) }
+  def pushCharacter(c: Char) { stack.push(c) }
 
   def enqueueCharacter(c: Char) = queue.enqueue(c)
 
