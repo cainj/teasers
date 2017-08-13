@@ -1,8 +1,8 @@
 package hackerrank.datastructures
 
 /**
-  * https://www.hackerrank.com/challenges/maximum-element
-  */
+ * https://www.hackerrank.com/challenges/maximum-element
+ */
 object MaximumElement {
 
   var max = -1
