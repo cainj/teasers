@@ -1,6 +1,4 @@
-package hackerrank.datastructures
-
-import hackerrank.algorithms.recursion.SimplifiedChess.{ createGames, createPiece, play }
+package hackerrank.datastructures.stacks
 
 object BalancedBrackets {
 

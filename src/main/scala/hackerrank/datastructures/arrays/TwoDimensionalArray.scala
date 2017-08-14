@@ -1,4 +1,4 @@
-package hackerrank.datastructures
+package hackerrank.datastructures.arrays
 
 /**
  * https://www.hackerrank.com/challenges/30-2d-arrays/problem

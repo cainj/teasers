@@ -1,4 +1,4 @@
-package hackerrank.datastructures
+package hackerrank.datastructures.arrays
 
 object ArrayDS {
 

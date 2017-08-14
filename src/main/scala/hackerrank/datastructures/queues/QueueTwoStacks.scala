@@ -1,4 +1,4 @@
-package hackerrank.datastructures
+package hackerrank.datastructures.queues
 
 /**
  * https://www.hackerrank.com/challenges/queue-using-two-stacks

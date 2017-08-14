@@ -1,4 +1,4 @@
-package hackerrank.datastructures
+package hackerrank.datastructures.stacks
 
 /**
  * https://www.hackerrank.com/challenges/maximum-element

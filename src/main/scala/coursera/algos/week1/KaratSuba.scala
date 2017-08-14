@@ -1,4 +1,4 @@
-package example.recursion
+package coursera.algos.week1
 
 /**
  *
