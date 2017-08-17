@@ -1,18 +1,23 @@
-import java.util.*;
+package hackerrank.thirtyDaysOfCode;
 
-class Node {
-    int data;
-    Node next;
-    Node(int d) {
-        data = d;
-        next = null;
-    }
-}
+import java.util.Scanner;
 
-class Solution {
+//class Node {
+//    int data;
+//    Node next;
+//    Node(int d) {
+//        data = d;
+//        next = null;
+//    }
+//}
+
+/**
+ * https://www.hackerrank.com/challenges/30-linked-list-deletion/problem
+ */
+class RemoveDuplicates {
 
 
-    public static  Node insert(Node head,int data)
+    public static Node insert(Node head, int data)
     {
         Node p=new Node(data);
         if(head==null)
