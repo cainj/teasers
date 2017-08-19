@@ -4,7 +4,7 @@ import java.util.Scanner
 
 import scala.collection.mutable.{ Queue, Stack }
 
-object Solution {
+object Palidrone {
 
   var queue = new Queue[Char]()
   var stack = new Stack[Char]()

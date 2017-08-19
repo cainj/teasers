@@ -2,14 +2,14 @@ package hackerrank.thirtyDaysOfCode;
 
 import java.util.Scanner;
 
-//class Node {
-//    int data;
-//    Node next;
-//    Node(int d) {
-//        data = d;
-//        next = null;
-//    }
-//}
+class Node {
+    int data;
+    Node next;
+    Node(int d) {
+        data = d;
+        next = null;
+    }
+}
 
 /**
  * https://www.hackerrank.com/challenges/30-linked-list-deletion/problem

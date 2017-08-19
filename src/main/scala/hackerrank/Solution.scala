@@ -2,32 +2,25 @@ package hackerrank
 
 import java.util.Scanner
 
-import scala.collection.mutable
-import scala.collection.mutable.Stack
-import scala.collection.mutable.Queue
-
 object Solution {
 
-  var queue = new Queue[Char]()
-  var stack = new Stack[Char]()
-
-  def palidrone(s: String, acc: List[Char]): List[Char] = {
-    if (s.isEmpty) acc
-    else palidrone(s.tail, s.head :: acc)
-  }
-
-  def pushCharacter(c: Char) { stack.push(c) }
-
-  def enqueueCharacter(c: Char) = queue.enqueue(c)
-
-  def dequeueCharacter = queue.dequeue()
-
-  def popCharacter = stack.pop
+  def checkPrime(i: Long) =
+    if (i == 1) println("Not prime")
+    else
+      (2 to Math.sqrt(i.toDouble).toInt) collectFirst {
+        case n if (i % n == 0) => n
+      } match {
+        case Some(_) => println("Not prime")
+        case None => println("Prime")
+      }
 
   def main(args: Array[String]) {
     val sc = new Scanner(System.in)
-    val n = sc.next
-    val answer = if (n == new String(palidrone(n, Nil).toArray)) s"$n, is" else s"$n is not"
-    println(s"The word, $answer a palidrone")
+    val n = sc.nextLine().trim.toInt
+    val primes = new Array[Long](n)
+    for (i <- 0 until n) { primes(i) = sc.nextLine().trim.toLong }
+    for {
+      i <- primes.indices
+    } { checkPrime(primes(i)) }
   }
 }
