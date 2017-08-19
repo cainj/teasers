@@ -16,7 +16,6 @@ class Node {
  */
 class RemoveDuplicates {
 
-
     public static Node insert(Node head, int data)
     {
         Node p=new Node(data);
