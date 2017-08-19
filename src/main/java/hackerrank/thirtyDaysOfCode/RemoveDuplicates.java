@@ -2,10 +2,10 @@ package hackerrank.thirtyDaysOfCode;
 
 import java.util.Scanner;
 
-class Node {
+class RNode {
     int data;
-    Node next;
-    Node(int d) {
+    RNode next;
+    RNode(int d) {
         data = d;
         next = null;
     }
@@ -16,16 +16,16 @@ class Node {
  */
 class RemoveDuplicates {
 
-    public static Node insert(Node head, int data)
+    public static RNode insert(RNode head, int data)
     {
-        Node p=new Node(data);
+        RNode p = new RNode(data);
         if(head==null)
             head=p;
         else if(head.next==null)
             head.next=p;
         else
         {
-            Node start=head;
+            RNode start=head;
             while(start.next!=null)
                 start=start.next;
             start.next=p;
@@ -34,9 +34,9 @@ class RemoveDuplicates {
         return head;
     }
 
-    public static Node removeDuplicates(Node head) {
-        Node prev = head;
-        Node tail = head.next;
+    public static RNode removeDuplicates(RNode head) {
+        RNode prev = head;
+        RNode tail = head.next;
         while (tail != null) {
             if (tail.data == prev.data) {
                 prev.next = tail.next;
@@ -49,9 +49,9 @@ class RemoveDuplicates {
         return head;
     }
 
-    public static void display(Node head)
+    public static void display(RNode head)
     {
-        Node start=head;
+        RNode start=head;
         while(start!=null)
         {
             System.out.print(start.data+" ");
@@ -61,7 +61,7 @@ class RemoveDuplicates {
     public static void main(String args[])
     {
         Scanner sc=new Scanner(System.in);
-        Node head=null;
+        RNode head = null;
         int T=sc.nextInt();
         while(T-->0){
             int ele=sc.nextInt();
