@@ -15,11 +15,11 @@ class QuickSortInPlace {
   def partition(array: Array[Int], lo: Int, hi: Int): Int = {
     val pivot = array(hi)
     var i = lo - 1
-    for (j <- lo until hi; if (array(j) < pivot)) {
+    for (j <- lo until hi; if array(j) < pivot) {
       i += 1
       swap(array, i, j)
     }
-    if (array(hi) < array(i + 1)) swap(array, i + 1, hi)
+    if (pivot < array(i + 1)) swap(array, i + 1, hi)
     println(array mkString (" "))
     i + 1
   }
