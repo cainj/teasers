@@ -1,6 +1,15 @@
 package coursera.algos.week3
 
+import coursera.algos.week2.NumberOfInversions.numberOfInversions
+
+import scala.io.Source
+
 object QuickSort {
+
+  //162085 first
+  //164123 last
+
+  var counter = 0
 
   def scalaQuickSort(list: Array[Int]): Array[Int] = {
     if (list.length < 1) list
@@ -12,22 +21,28 @@ object QuickSort {
 
   def quickSort(xs: Array[Int], l: Int, r: Int) {
     if (l < r) {
+      swap(xs, r, l)
       val pivot: Int = partition(xs, l, r)
+      counter = (l until r).length + counter
       quickSort(xs, l, pivot - 1)
       quickSort(xs, pivot + 1, r)
     }
   }
 
-  def partition(xs: Array[Int], l: Int, r: Int) = {
-    val pivot = xs(l)
-    var i = l + 1
-    for (j <- l until r; if xs(j) < pivot) {
-      swap(xs, i, j)
-      i += 1
+  def partition(xs: Array[Int], first: Int, last: Int): Int = {
+    val pivot = xs(first)
+    println(s"pivot - $pivot")
+    var left = first + 1
+    for {
+      right <- left to last
+      if xs(right) < pivot
+    } {
+      swap(xs, left, right)
+      left += 1
     }
-    i -= 1
-    swap(xs, l, i)
-    i
+    left -= 1
+    swap(xs, first, left)
+    left
   }
 
   def swap(xs: Array[Int], l: Int, r: Int) = {
@@ -36,9 +51,16 @@ object QuickSort {
     xs(l) = hold
   }
   def main(args: Array[String]) {
-    val array = Array(3, 5, 4, 2, 1, 7, 10, -2, -5, 90, 64)
-    quickSort(array, 0, array.length)
-    println(array.deep)
+    val fileWithNumbers = "QuickSort.txt"
+    val start = System.currentTimeMillis()
+    val array = Source.fromResource(fileWithNumbers).getLines().map(Integer.parseInt).toArray
+    //val array = Array(4, 5, 8, 3, 2, 1)
+    quickSort(array, 0, array.length - 1)
+    val end = System.currentTimeMillis()
+    println("Total time: " + (end - start))
+    println(array.toList)
+    //println(counterLast)
+    println(counter)
   }
 
 }

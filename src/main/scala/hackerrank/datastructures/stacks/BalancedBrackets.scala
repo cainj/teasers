@@ -3,6 +3,26 @@ package hackerrank.datastructures.stacks
 object BalancedBrackets {
 
   val brackets = Map(')' -> '(', ']' -> '[', '}' -> '{')
+
+  /**
+   * Tail recursive
+   *
+   * @param expression
+   * @param stack
+   * @return
+   */
+  def isBalanced(expression: String, stack: List[Char]): Boolean = {
+    if (expression.isEmpty)
+      stack == Nil
+    else if (brackets.values.toSet.contains(expression.head)) {
+      isBalanced(expression.tail, expression.head :: stack)
+    } else if (stack != Nil && brackets(expression.head) == stack.head) {
+      isBalanced(expression.tail, stack.tail)
+    } else {
+      false
+    }
+  }
+
   def validateBrackets(b: String): Boolean = {
     var s = b
     var stack = List.empty[Char]
