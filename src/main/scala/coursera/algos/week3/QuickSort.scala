@@ -7,7 +7,8 @@ import scala.io.Source
 object QuickSort {
 
   //162085 first
-  //164123 last
+  //164123 second
+  //138382
 
   var counter = 0
 
@@ -19,8 +20,23 @@ object QuickSort {
     }
   }
 
+  def findMedian(xs: Array[Int], left: Int, right: Int): Int = {
+    val first = xs(left)
+    val middle = if (xs.length % 2 == 0) xs((right - left - 1) / 2) else xs((right - left) / 2)
+    val last = xs(right)
+
+    val max = Math.max(Math.max(first, middle), last)
+    val min = Math.min(Math.min(first, middle), last)
+    val median = first ^ middle ^ last ^ max ^ min
+
+    if (median == first) left
+    else if (median == middle) middle
+    else right
+  }
+
   def quickSort(xs: Array[Int], l: Int, r: Int) {
     if (l < r) {
+      val median = findMedian(xs, l, r)
       swap(xs, r, l)
       val pivot: Int = partition(xs, l, r)
       counter = (l until r).length + counter
@@ -54,7 +70,7 @@ object QuickSort {
     val fileWithNumbers = "QuickSort.txt"
     val start = System.currentTimeMillis()
     val array = Source.fromResource(fileWithNumbers).getLines().map(Integer.parseInt).toArray
-    //val array = Array(4, 5, 8, 3, 2, 1)
+    //    val array = Array(4, 5, 8, 3, 2, 1)
     quickSort(array, 0, array.length - 1)
     val end = System.currentTimeMillis()
     println("Total time: " + (end - start))
