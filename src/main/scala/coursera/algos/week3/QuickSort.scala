@@ -21,32 +21,30 @@ object QuickSort {
   }
 
   def findMedian(xs: Array[Int], left: Int, right: Int): Int = {
-    val first = xs(left)
-    val middle = if (xs.length % 2 == 0) xs((right - left - 1) / 2) else xs((right - left) / 2)
-    val last = xs(right)
+    val center = if (xs.length % 2 == 0) ((left + right) / 2) - 1 else (left + right) / 2
+    // order left & center
+    if (xs(left) > xs(center)) swap(xs, left, center)
+    // order left & right
+    if (xs(left) > xs(right)) swap(xs, left, right)
+    // order center & right
+    if (xs(center) > xs(right)) swap(xs, center, right)
 
-    val max = Math.max(Math.max(first, middle), last)
-    val min = Math.min(Math.min(first, middle), last)
-    val median = first ^ middle ^ last ^ max ^ min
+    swap(xs, center, left) // put pivot on left
 
-    if (median == first) left
-    else if (median == middle) middle
-    else right
+    xs(left) // return median value
   }
 
   def quickSort(xs: Array[Int], l: Int, r: Int) {
     if (l < r) {
-      val median = findMedian(xs, l, r)
-      swap(xs, r, l)
-      val pivot: Int = partition(xs, l, r)
+      val i: Int = partition(xs, l, r)
       counter = (l until r).length + counter
-      quickSort(xs, l, pivot - 1)
-      quickSort(xs, pivot + 1, r)
+      quickSort(xs, l, i - 1)
+      quickSort(xs, i + 1, r)
     }
   }
 
   def partition(xs: Array[Int], first: Int, last: Int): Int = {
-    val pivot = xs(first)
+    val pivot = findMedian(xs, first, last)
     println(s"pivot - $pivot")
     var left = first + 1
     for {
@@ -70,12 +68,11 @@ object QuickSort {
     val fileWithNumbers = "QuickSort.txt"
     val start = System.currentTimeMillis()
     val array = Source.fromResource(fileWithNumbers).getLines().map(Integer.parseInt).toArray
-    //    val array = Array(4, 5, 8, 3, 2, 1)
+    //val array = Array(4, 5, 8, 3, 2, 1)
     quickSort(array, 0, array.length - 1)
     val end = System.currentTimeMillis()
+    //println(array.toList)
     println("Total time: " + (end - start))
-    println(array.toList)
-    //println(counterLast)
     println(counter)
   }
 
