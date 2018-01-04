@@ -1,5 +1,6 @@
 package uber
 
+import scala.collection.mutable
 import scala.util.Try
 
 /**
@@ -38,7 +39,7 @@ import scala.util.Try
  * 1 1 1
  *
  * Since the player can ONLY move to the right (→) or down (↓), the maximum score a player can achieve is 4
- * by following the path (0,0) ⇒ (1,0) ⇒ (2,0) ⇒ (2, 1) ⇒ (2, 2)
+ * by following the path (0,0) ⇒ (0,1) ⇒ (0,2) ⇒ (1,2) ⇒ (2, 2)
  *
  * Sample Input 2
  * Now consider another simple input board:
@@ -59,7 +60,7 @@ object DiamondMine {
 
   type Terrain = Array[Array[Int]]
 
-  val start = (Position(0, 0), 0)
+  val start: (Position, Int) = (Position(0, 0), 0)
 
   val initialPath = List(start)
 
@@ -67,22 +68,56 @@ object DiamondMine {
     val GOAL = Position(terrain.length - 1, terrain.length - 1)
 
     /**
-     * Moves thru the Terrain
+     * Gives all paths thru terrain
      *
      * @param path The path taken
      * @return
      */
-    def move(path: Path): List[Path] = {
+    def depthFirstSearch(path: Path): List[Path] = {
       val pos = path.last._1
       if (pos == GOAL) List(path)
       else {
         for {
           neighbor <- pos.legalMoves(terrain)
-          p <- move(path :+ neighbor)
+          p <- depthFirstSearch(path :+ neighbor)
         } yield p
       }
     }
-    val paths = move(initialPath)
+
+    /**
+     * Gives the shortest path
+     *
+     * @param start
+     * @return
+     */
+    def breadthFirstSearch(start: Path): Path = {
+      val queue = new mutable.Queue[Path]()
+      queue.enqueue(start)
+      var solution = List.empty[(Position, Int)]
+      while (queue.nonEmpty && solution.isEmpty) {
+        val blocks = queue.dequeue()
+        if (blocks.last._1 != GOAL)
+          blocks.last._1.legalMoves(terrain) foreach { h =>
+            queue.enqueue(blocks :+ h)
+          }
+        else solution = blocks
+      }
+      solution
+    }
+
+    val dfs = depthFirstSearch(initialPath)
+    val maxDFS = getMax(dfs)
+
+    val bfs = breadthFirstSearch(List(start))
+    val maxBFS = getMax(List(bfs))
+
+    println(s"BFS: $bfs")
+    println(s"DFS: $dfs")
+
+    if (maxBFS == maxDFS) maxBFS else maxDFS
+  }
+
+  def getMax(paths: List[Path]): Int = {
     paths match {
       case Nil => 0
       case _ => paths map { path => path.foldLeft(0) { (sum, next) => sum + next._2 } } max
@@ -105,18 +140,17 @@ object DiamondMine {
 
     def DOWN = Position(this.x, this.y + 1)
 
-    private def square(pos: Position, terrain: Terrain): Int = Try { terrain(pos.x)(pos.y) } getOrElse (-1)
+    private def square(pos: Position, terrain: Terrain): Int = Try { terrain(pos.y)(pos.x) } getOrElse (-1)
 
     def legalMoves(terrain: Terrain): List[(Position, Int)] = List(RIGHT, DOWN) collect {
-      case p if (square(p, terrain) != Wall) => (p, square(p, terrain))
+      case p if square(p, terrain) != Wall => (p, square(p, terrain))
     }
   }
 
   object State {
 
-    val Wall = -1
+    val Wall: Int = -1
     val Diamond = 1
     val Empty = 0
   }
 }
-
