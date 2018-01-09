@@ -96,11 +96,11 @@ object DiamondMine {
       var solution = List.empty[(Position, Int)]
       while (queue.nonEmpty && solution.isEmpty) {
         val blocks = queue.dequeue()
-        if (blocks.last._1 != GOAL)
+        if (blocks.last._1 != GOAL) {
           blocks.last._1.legalMoves(terrain) foreach { h =>
             queue.enqueue(blocks :+ h)
           }
-        else solution = blocks
+        } else solution = blocks
       }
       solution
     }
@@ -110,9 +110,6 @@ object DiamondMine {
 
     val bfs = breadthFirstSearch(List(start))
     val maxBFS = getMax(List(bfs))
-
-    println(s"BFS: $bfs")
-    println(s"DFS: $dfs")
 
     if (maxBFS == maxDFS) maxBFS else maxDFS
   }
@@ -127,7 +124,7 @@ object DiamondMine {
   def main(args: Array[String]) {
 
     // Sample 1
-    println(collectMax(Array(Array(0, 1, 1), Array(1, 0, -1), Array(1, 1, 1))) == 4)
+    println(collectMax(Array(Array(0, 1, 1), Array(1, 0, 1), Array(1, -1, 1))) == 4)
 
     //Sample 2
     println(collectMax(Array(Array(0, 1, -1), Array(1, 0, -1), Array(1, -1, 0))) == 0)
@@ -140,7 +137,7 @@ object DiamondMine {
 
     def DOWN = Position(this.x, this.y + 1)
 
-    private def square(pos: Position, terrain: Terrain): Int = Try { terrain(pos.y)(pos.x) } getOrElse (-1)
+    private def square(pos: Position, terrain: Terrain): Int = Try { terrain(pos.x)(pos.y) } getOrElse (-1)
 
     def legalMoves(terrain: Terrain): List[(Position, Int)] = List(RIGHT, DOWN) collect {
       case p if square(p, terrain) != Wall => (p, square(p, terrain))
