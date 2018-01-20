@@ -61,7 +61,7 @@ object Poker extends App {
   private[this] def evaluate(cards: Cards): Int = {
     val sorted = cards.sortWith(_.value < _.value)
 
-    val straight = (1 to 4).forall{ next => sorted(next).value - sorted(next - 1).value == 1 }
+    val straight = (1 to 4).forall { next => sorted(next).value - sorted(next - 1).value == 1 }
     val flush = sorted.forall(_.suite == sorted.head.suite)
 
     if (straight && flush)
