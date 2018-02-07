@@ -49,7 +49,7 @@ object Boggle {
         case head :: tail =>
           (for {
             (pos, letter) <- head._1.validLetters(word.head, boggle) diff explored
-            if (letter == word.head)
+            if letter == word.head
           } yield createStreams(word.tail, boggle, (pos, letter) :: path, explored + (pos -> letter))).flatten.toStream
       }
     else Stream(new String(path.reverse map { _._2 } toArray))
@@ -66,7 +66,7 @@ object Boggle {
       i <- boggle.indices
       currArray = boggle(i)
       j <- currArray.indices
-      if (c == currArray(j))
+      if c == currArray(j)
     } yield {
       (Pos(i, j), c)
     }
