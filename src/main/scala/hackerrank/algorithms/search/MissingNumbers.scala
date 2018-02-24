@@ -1,4 +1,4 @@
-package hackerrank.search
+package hackerrank.algorithms.search
 
 object MissingNumbers {
 
