@@ -1,3 +1,5 @@
+package hackerrank.algorithims.graphtheory;
+
 import java.util.LinkedList;
 import java.util.Scanner;
 
