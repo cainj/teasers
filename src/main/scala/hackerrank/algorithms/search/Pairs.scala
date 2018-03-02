@@ -3,8 +3,8 @@ package hackerrank.algorithms.search
 import scala.collection.mutable
 
 /**
-  * https://www.hackerrank.com/challenges/pairs/problem
-  */
+ * https://www.hackerrank.com/challenges/pairs/problem
+ */
 object Pairs {
 
   def pairs(k: Int, arr: Array[Int]): Int = {
