@@ -1,8 +1,8 @@
 package hackerrank.crackingTheCodeInterview
 
 /**
-  * https://www.hackerrank.com/challenges/coin-change/problem
-  */
+ * https://www.hackerrank.com/challenges/coin-change/problem
+ */
 object CoinChange {
 
   def change(n: Int, coins: Array[Int]): Long = {
@@ -14,6 +14,18 @@ object CoinChange {
       if amount >= coin
     } rover(amount) += rover(amount - coin)
     rover(n)
+  }
+
+  /**
+    * Recursion
+    */
+  def change(n: Int, coins: Array[Int], currentCoin: Int): Long = {
+    if (n == 0) 1
+    else if (n < 1) 0
+    else
+      (for {
+        coin <- currentCoin until coins.length
+      } yield change(n - coins(coin), coins, coin)).sum
   }
 
   def main(args: Array[String]) {
