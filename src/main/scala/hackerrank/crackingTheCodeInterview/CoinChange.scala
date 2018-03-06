@@ -17,8 +17,8 @@ object CoinChange {
   }
 
   /**
-    * Recursion
-    */
+   * Recursion
+   */
   def change(n: Int, coins: Array[Int], currentCoin: Int): Long = {
     if (n == 0) 1
     else if (n < 1) 0
