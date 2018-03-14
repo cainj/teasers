@@ -20,8 +20,8 @@ object Tries {
     var a0 = 0
     val node = new Node()
     while (a0 < n) {
-      var op = sc.next()
-      var contact = sc.next()
+      val op = sc.next()
+      val contact = sc.next()
       op match {
         case "add" => node.add(contact)
         case "find" => println(node.find(contact) + " ")
