@@ -1,4 +1,4 @@
-package hackerrank.algorithms.strings.sort
+package hackerrank.algorithms.sort
 
 /**
  *
@@ -9,12 +9,12 @@ object InsertionSort {
     val sc = new java.util.Scanner(System.in)
     val n = sc.nextInt()
     val a = new Array[Int](n)
-    for (i <- 0 to n - 1) {
+    for (i <- 0 until n) {
       a(i) = sc.nextInt()
     }
 
     insertionSort(a)
-    println(a mkString (" "))
+    println(a mkString " ")
   }
 
   def insertionSort(ar: Array[Int]): Unit = {

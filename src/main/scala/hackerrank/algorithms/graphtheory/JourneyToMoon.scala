@@ -1,9 +1,8 @@
 package hackerrank.algorithms.graphtheory
 
-
 /**
-  * https://www.hackerrank.com/challenges/journey-to-the-moon/problem
-  */
+ * https://www.hackerrank.com/challenges/journey-to-the-moon/problem
+ */
 object JourneyToMoon {
 
   type Astronauts = Array[Array[Int]]

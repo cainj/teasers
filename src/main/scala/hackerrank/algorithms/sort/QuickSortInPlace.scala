@@ -20,11 +20,11 @@ class QuickSortInPlace {
       swap(array, i, j)
     }
     if (pivot < array(i + 1)) swap(array, i + 1, hi)
-    println(array mkString (" "))
+    println(array mkString " ")
     i + 1
   }
 
-  def swap(a: Array[Int], i: Int, j: Int) = {
+  def swap(a: Array[Int], i: Int, j: Int): Unit = {
     val hold = a(i)
     a(i) = a(j)
     a(j) = hold
@@ -34,7 +34,7 @@ class QuickSortInPlace {
     if (lo < hi) {
       val pivot: Int = partition(array, lo, hi)
       quicksort(array, lo, pivot - 1)
-      quicksort(array, (pivot + 1), hi)
+      quicksort(array, pivot + 1, hi)
     }
   }
 }
