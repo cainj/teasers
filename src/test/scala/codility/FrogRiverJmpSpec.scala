@@ -1,5 +1,7 @@
 package codility
 
+import org.scalatest.{FlatSpec, Matchers}
+
 /**
  *
  */

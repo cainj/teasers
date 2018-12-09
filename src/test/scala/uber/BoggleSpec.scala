@@ -1,5 +1,7 @@
 package uber
 
+import org.scalatest.{FlatSpec, Matchers}
+
 class BoggleSpec extends FlatSpec with Matchers {
   "The Boggle object" should "find words" in {
     Boggle.solve(
