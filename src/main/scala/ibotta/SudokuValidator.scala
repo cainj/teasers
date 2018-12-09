@@ -1,4 +1,4 @@
-package ibotta.recursion
+package ibotta
 
 object SudokuValidator {
 
