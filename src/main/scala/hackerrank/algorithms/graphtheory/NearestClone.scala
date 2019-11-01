@@ -12,10 +12,7 @@ object NearestClone {
     def addNeighbors(node: GraphNode): Boolean = neighbors.add(node)
   }
 
-  def findStart(color: Long, graph: Graph): GraphNode = graph.find {
-    _.color == color
-  }.get
-
+  def findStart(color: Long, graph: Graph): GraphNode = graph(color.toInt - 1)
 
   def findShortest(graphNodes: Int, graphFrom: Array[Int], graphTo: Array[Int], ids: Array[Long], `val`: Int): Int = {
     // create nodes with ids
